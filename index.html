@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Anandito Fernanda - Junior IoT Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- === Video Background === -->
+<!-- <video autoplay muted loop playsinline id="bgVideo">
+    <div class="video-overlay">
+        <source src="videobg.mp4" type="video/mp4">
+    </div>
+</video> -->
+<!-- section chat bot -->
+ <div class="chat-bot" id="chatBot">
+  <div class="chat-header">
+    <h4>Ask Anan 🤖</h4>
+    <button id="chatToggle">✖</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <p><strong>AnanBot:</strong> Halo! Mau tanya apa tentang IoT atau project-ku? 😄</p>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Ketik pesanmu..." />
+    <button id="sendBtn">➤</button>
+  </div>
+</div>
+
+<button class="chat-fab" id="chatFab">
+  <i class="fa-solid fa-robot"></i>
+</button>
+
+ <!-- end of chat bot -->
+<!-- section CLI -->
+ <section id="terminal" class="terminal-section">
+  <div class="terminal">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="terminal-title">anandhito@portfolio:~</span>
+    </div>
+    <div class="terminal-body" id="terminalBody"></div>
+  </div>
+</section>
+
+ <!-- end of section CLI -->
+<!-- SECTION HUD STYLE  -->
+ <!-- Floating HUD Navigation -->
+<div class="hud-nav" id="hudNav">
+  <button class="hud-btn" id="hudToggle">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <div class="hud-menu" id="hudMenu">
+    <a href="#terminal">💻 Terminal</a>
+    <a href="#skills">⚙️ Skills</a>
+    <a href="#iot">🌡️ IoT Data</a>
+    <a href="#projects">📁 Projects</a>
+    <a href="#social">📬 Contact</a>
+    <a href="#store">🛒My Store</a>
+  </div>
+</div>
+
+ <!-- END OF SECTION HUD -->
+<!-- inspiratif massage -->
+<!-- di footer -->
+<!-- end of inspiratif massage -->
+    <!-- === Mini Music Player === -->
+<div class="music-player" id="musicPlayer">
+  <div class="music-info">
+    <p id="music-title"><strong>The Ocean</strong></p>
+    <span id="music-artist">by Mike Perry ft. Shy Martin</span>
+  </div>
+  <audio id="audioPlayer" src="music/Mike Perry - The Ocean (ft. Shy Martin) [Lyrics CC].mp3"></audio>
+  <button id="playPauseBtn" class="play-btn">
+    <i class="fa-solid fa-play"></i>
+  </button>
+</div>
+
+    <div class="matrix-bg"></div> <!-- Subtle matrix effect -->
+    <!-- Efek Cyber Dust -->
+    <div id="cyberDust"></div>
+    <div class="floating-cube" style="top:10%;left:15%;"></div>
+    <div class="floating-cube" style="top:60%;right:10%;"></div>
+    <div class="floating-cube" style="bottom:20%;left:40%;"></div>
+    <!-- Efek Glowing Grid -->
+    <div class="data-field"></div>
+    <!-- 🌫️ Efek Smoke Blur -->
+    <div class="smoke"></div>
+
+    <!-- 🌈 Efek Aurora Light Sweep -->
+    <div class="aurora"></div>
+
+    <!-- 🎇 Efek Bokeh Neon -->
+    <div class="bokeh">
+    <span style="background:#00ffff; top:20%; left:15%;"></span>
+    <span style="background:#ff00ff; top:50%; left:40%;"></span>
+    <span style="background:#00ff99; top:70%; left:75%;"></span>
+    <span style="background:#0088ff; top:30%; left:80%;"></span>
+    <span style="background:#ff0088; top:60%; left:10%;"></span>
+    </div>
+
+<!-- section glow network.bg -->
+ <canvas id="network-bg"></canvas>
+<!-- end of section-->
+    <!-- Floating Transparent 3D Shapes -->
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape">
+        <a style="color: cyan;">Arnand</a>
+    </div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+     <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Performance Toggle Button -->
+    <button id="performanceToggle" class="performance-toggle">
+      <i class="fa-solid fa-rocket"></i>
+      <span class="toggle-tooltip">Toggle Effects</span>
+    </button>
+
+    <header>
+        <h1>Anandhito Ernanda</h1>
+        <div class="text-glow">
+           <p class="a">| Also known as Anan | 19 Years Old |</p>
+          <p class="b">| Junior IoT Developer & Robotics Expert 🤖 |</p>
+          <p class="c"> | ⚡ Electrical Engineering Enthusiast⚡ |</p>
+          <p class="d"> | from Indonesia | especially Cikarang |</p> 
+        </div>
+    </header>
+    <section id="about" class="about reveal">
+        <img src="src/me.jpg" alt="Anandito Ernanda"> <!-- Placeholder image; replace with actual photo -->
+        <div class="text-container">
+            <h2 class="glow">About Me</h2>
+            <p style="text-align: justify;">Haii semuanya !! gue lulusan SMA dan nama gua <b>Anandito Ernanda</b>, panggil aja Anan :) .
+              saat ini gue menginjak usia 19 Tahun pada tahun 2025. gua juga merupakan seorang IoT Developer pemula dengan berbagai pengalaman di dunia IoT, Elektronika, dan Robotika.</p>
+              <p style="text-align: justify;">
+                   Gua juga membuat konten yang membahas tentang seputar dunia programming, berbagi tips dan tutorial untuk menginspirasi temen-temen di dunia programming, khususnya IoT dan Robotik.
+              </p>
+              <p></p>
+              <div class="iot-card text-glow-cyan" style="opacity: 70%;">
+               <h3 class="text-glow-strong" style="text-align: center; opacity: 90%;">Salam  Kenal :)</h3>
+               <!-- <h4 class ="iot-footer" style="text-align: center; opacity: 70%;">Enjoy Bacanya !</h4> -->
+              </div>
+
+        </div>
+    </section>
+<!-- IoT dashboard -->
+ <section id="iot" class="iot-widget reveal">
+  <h2 class="glow">Cuaca Di Bekasi</h2>
+  <div class="iot-box">
+    <p class="text-glow-strong"><strong>Suhu :</strong> <span id="temp">--</span> °C</p>
+    <p class="text-glow-strong"><strong>Kelembaban :</strong> <span id="hum">--</span> %</p>
+  </div>
+</section>
+<!-- end of IoT dashboard -->
+    <section id="skills" class="skills reveal">
+        <h2 class="glow">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <img src="src/Arduino.png" alt="Arduino">
+                <p style="color:cyan">Arduino</p>
+            </div>
+            <div class="skill-item-x">
+                <img src="src/ESP-bg-fix.png" alt="ESP"> <!-- Placeholder; ESP logo not standard, use actual if available -->
+                <p style="color: red;">Espressif (ESP)</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/IoT.jpeg" alt="IoT">
+                <p style="color:antiquewhite">IoT</p>
+            </div>
+            <div class="skill-item-x">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+                <p style="color:#0099cc">C++</p>
+            </div>
+            <div class="skill-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C">
+                <p style="color:#0071fc">C</p>
+            </div>
+            <div class="skill-item-x">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+                <p style="color: orange">HTML</p>
+            </div>
+            <div class="skill-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
+                <p style="color: rgb(53, 102, 249)">CSS</p>
+            </div>
+            <div class="skill-item-x">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JS">
+                <p style="color: yellow;">Java Script</p>
+            </div>
+            <div class="skill-item">
+                <img src="src/python.jpg" alt="python">
+                <p style="color:rgb(199, 152, 0)">PYTHON</p>
+            </div>
+            <div class="skill-item-x">
+                <img src="src/bash-command.jpg" alt="bash command">
+                <p style="color:rgb(255, 255, 255)">Bash</p>
+            </div>
+        </div>
+    </section>
+    <!-- Bar Skill -->
+     <section id="skill-levels" class="skill-levels reveal">
+    <h2 class="glow">Skill Level Bar</h2>
+
+    <div class="skill-bar">
+        <p>Arduino <span>85%</span></p>
+        <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>ESP <span>75%</span></p>
+        <div class="bar"><div class="fill" style="width: 75%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>IoT <span>77%</span></p>
+        <div class="bar"><div class="fill" style="width: 77%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>C++ <span>60%</span></p>
+        <div class="bar"><div class="fill" style="width: 60%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>C <span>60%</span></p>
+        <div class="bar"><div class="fill" style="width: 60%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>HTML <span>50%</span></p>
+        <div class="bar"><div class="fill" style="width: 50%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>CSS <span>50%</span></p>
+        <div class="bar"><div class="fill" style="width: 50%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>JavaScript <span>45%</span></p>
+        <div class="bar"><div class="fill" style="width: 45%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <p>Python <span>87%</span></p>
+        <div class="bar"><div class="fill" style="width: 87%;"></div></div>
+    </div>
+    <div class="skill-bar">
+        <p>Bash<span>37%</span></p>
+        <div class="bar"><div class="fill" style="width: 37%;"></div></div>
+    </div>
+</section>
+    <!-- end of Bar Skill -->
+    <!-- section code editor -->
+     <section id="editors" class="editors reveal">
+    <h2 class="glow">My Code Editors</h2>
+    <div class="editors-grid">
+        <div class="editor-item">
+            <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS Code">
+            <p style="color:#00aaff;">Visual Studio Code</p>
+        </div>
+        <div class="editor-item-z">
+            <img src="src/Arduino.png" alt="Arduino IDE">
+            <p style="color:#00ffcc;">Arduino IDE</p>
+        </div>
+        <div class="editor-item">
+            <img src="src/notepad++.jpg" alt="Notepad++">
+            <p style="color:#b3ff00;">Notepad++</p>
+        </div>
+    </div>
+</section>
+     <!-- end of section -->
+<!-- section IoT tools -->
+ <section id="tools" class="tools-section">
+  <h2 class="section-title">🧰 IoT Tools & Platforms </h2>
+  <div class="tools-container">
+    <div class="tool-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+      <p class="text-glow-animate">GitHub</p>
+      <div class="tool-bar">
+        <div class="tool-progress" style="width: 80%;"></div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" />
+      <p class="text-glow-animate">Firebase</p>
+      <div class="tool-bar">
+        <div class="tool-progress" style="width: 50%;"></div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <img src="src/blynk.png" alt="Blynk" />
+      <p class="text-glow-animate">Blynk</p>
+      <div class="tool-bar">
+        <div class="tool-progress" style="width: 75%;"></div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <img src="src/thingspeak.png" alt="ThingSpeak" />
+      <p class="text-glow-animate">ThingSpeak</p>
+      <div class="tool-bar">
+        <div class="tool-progress" style="width: 75%;"></div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <img src="src/tinkercad.png" alt="Tinkercad" />
+      <p class="text-glow-animate">Tinkercad</p>
+      <div class="tool-bar">
+        <div class="tool-progress" style="width: 85%;"></div>
+      </div>
+    </div>
+
+     <div class="tool-card">
+      <img src="src/WokWi.jpg" alt="WokWi" />
+      <p class="text-glow-animate">WokWi</p>
+      <div class="tool-bar">
+        <div class="tool-progress" style="width: 97%;"></div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Proteus" />
+      <p class="text-glow-animate">Linux</p>
+      <div class="tool-bar">
+        <div class="tool-progress" style="width: 45%;"></div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <img src="src/MQTT.png" alt="Arduino Cloud" />
+      <p class="text-glow-animate">MQTT </p>
+      <div class="tool-bar">
+        <div class="tool-progress" style="width: 70%;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- end of section -->
+<!-- section prestasi -->
+ <section id="achievements" class="achievements reveal">
+    <h2 class="glow">🏆 My Achievements</h2>
+
+    <div class="achievement-list">
+        <ul>
+            <li>2nd Place – Festival of Research, Science, and Technology (FOREST) 2024</li>
+            <li>Top 10 Finalist – Internet of Things Challenge, TELEPATI POLBAN 2024</li>
+            <li>Certificate – Software Engineering 2025</li>
+        </ul>
+    </div>
+
+    <div class="certificates">
+        <div class="certificate-item">
+            <img src="src/certificate1.jpg" alt="FOREST 2024">
+            <p><strong class="cert-glow">Certificate of Achievement – Festival of Research, Science, and Technology<p>‖ FOREST 2024 ‖</p></strong></p>
+        </div>
+
+        <div class="certificate-item">
+            <img src="src/certificate2.jpg" alt="TELEPATI 2024">
+            <p><strong class="cert-glow">Certificate Top 10 Finalist – Internet of Things Challenge</p>‖ TELEPATI POLBAN 2024 ‖ </strong></p>
+        </div>
+
+        <div class="certificate-item">
+            <img src="src/certificate3.jpg" alt="SE 2025">
+            <p><strong class="cert-glow">Certificate of appreciation <p>‖ Software Engineering 2025 ‖ </p></strong></p>
+        </div>
+    </div>
+</section>
+
+<!-- end of section prestasi -->
+ <!-- showcase projects -->
+ <section id="projects" class="projects reveal">
+  <h2 class="glow">💡 My Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="src/smart-temp.jpg" alt="IoT Projects">
+      <h3>IoT – Smart Temperature and Humidity</h3>
+      <p>IoT project using gas, light, and infrared sensors integrated via WeMos D1 Mini ESP8266.</p>
+      <a href="#" target="_blank" class="project-link">🔗 View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Gyroscope Censor With 3D Digital design</h3>
+      <p>Gyroscope sensor controls the movement of a digital 3D image</p>
+      <video controls poster="src/IoT.jpeg" class="project-video">
+      <source src="video/gyroscope.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+</video>
+    </div>
+
+    <div class="project-card">
+      <h3>Ultrasonic Radar</h3>
+      <p>Arduino-based radar system using HC-SR04 sensor and servo motor for object detection.</p>
+      <div>
+       <video controls poster="src/IoT.jpeg" class="project-video">
+       <source src="video/ultrasonic-radar.mp4" type="video/mp4">
+      </div>
+      <a href="#" class="project-link">🔗 View Project</a>
+    </div>
+
+    <div class="project-card">
+        <h3>MEGA Project IoT with @ravasearch ⟦ SMART GARDEN ⟧</h3>
+        <p>Sistem Pengiriman Data Dual-Mode untuk Pertanian Rural Berbasis Mikrokontroller Menggunakan Kombinasi Jaringan Lokal dan Internet.</p>
+        <div class="project-image">
+         <img src="src/smart-garden.jpg" alt="Smart Garden Preview">
+        </div>
+
+    </div>
+  </div>
+</section>
+<!-- end of showcase -->
+ <!-- start list order -->
+  <section id="store" class="iot-section reveal">
+  <h2 class="iot-title glow">⚙️ Arnan IoT Store</h2>
+  <p class="iot-subtitle glow">Solusi IoT dan Robotik dari Coding sampai Alat Jadi</p>
+
+  <div class="iot-content">
+    <p>
+      <strong>Arnan IoT Store</strong> adalah layanan jasa yang bergerak di bidang 
+      <strong>Internet of Things (IoT)</strong> dan robotik, berfokus pada pembuatan proyek, 
+      solusi alat pintar, serta pengerjaan coding berbasis mikrokontroler seperti 
+      <em>Arduino, ESP8266, WeMos, NodeMCU</em>, dan sejenisnya.
+    </p>
+
+    <p>
+      Layanan ini cocok untuk berbagai kebutuhan — mulai dari tugas sekolah, proyek kuliah, skripsi,
+      lomba teknologi, hingga pengembangan ide bisnis berbasis IoT. 
+      Semua proyek dikerjakan secara online (*Pre-Order*) dan bisa disesuaikan berdasarkan 
+      tingkat kesulitan serta jenis board yang digunakan.
+    </p>
+
+    <h3 class="glow">💻 Kategori Jasa Coding</h3>
+    <ul class="iot-list">
+      <li><strong>🔹 Basic Project</strong> — Proyek sederhana (1 sensor) seperti suhu atau jarak.<br><span class="price">💰 Rp50.000</span></li>
+      <li><strong>🔹 Intermediate Project</strong> — 2–3 sensor + komunikasi dasar (WiFi/Bluetooth).<br><span class="price">💰 Rp60.000 – Rp80.000</span></li>
+      <li><strong>🔹 Advanced Project</strong> — Integrasi kompleks, database, otomatisasi.<br><span class="price">💰 Rp100.000 – Rp120.000</span></li>
+    </ul>
+
+    <p class="note">
+      💡 Kisaran harga jasa coding: <strong>Rp50.000 – Rp300.000</strong><br>
+      Semua proyek bergaransi dan dapat direvisi bila ditemukan kesalahan fungsi.
+    </p>
+
+    <h3 class="glow">🧩 Fitur Tambahan / Add-On</h3>
+    <ul class="iot-list">
+      <li>📘 Penjelasan detail coding — <span class="price">Rp35.000</span></li>
+      <li>💬 Penjelasan singkat coding — <span class="price">Rp25.000</span></li>
+      <li>🧰 Konsultasi online — <span class="price">Rp20.000</span></li>
+      <li>🎞 Penjelasan alat (PPT) — <span class="price">Rp25.000</span></li>
+      <li>📄 Penjelasan alat (Word) — <span class="price">Rp15.000</span></li>
+    </ul>
+
+    <div class="iot-card">
+      <h4 class="glow">💠 Paket Lengkap (All-in-One)</h4>
+      <p class="iot-card">Tambahan Rp70.000 dari harga utama — dapat semua fitur di atas! Cocok buat hasil rapi dan siap presentasi.</p>
+    </div>
+
+    <h3 class="glow">🔧 Contoh Proyek</h3>
+    <ul class="iot-list">
+      <li>🏠 Smart Home (WiFi / Bluetooth Control)</li>
+      <li>🌡 Smart Temperature Monitoring</li>
+      <li>📏 Penggaris Digital Otomatis</li>
+      <li>🛰 Ultrasonic Sensor Radar / Mapping</li>
+      <li>🤖 Custom Robotik & IoT Project</li>
+    </ul>
+
+    <div class="iot-footer glow">
+      <p><strong>📍 Arnan IoT Store</strong><br>
+      “Solusi IoT dan robotik dari coding sampai alat jadi.”<br>
+      🛠 Semua layanan dilakukan secara <em>online (Pre-Order)</em> dan dijamin berkualitas.</p>
+    </div>
+  </div>
+</section>
+<!-- SECTION WA NUMBER -->
+<div class="iot-socials">
+  <div class="wa-wrapper">
+        <a href="https://wa.me/6287870330366?text=Halo%21%20Saya%20mau%20pesan%20jasa%20coding%20dari%20Arnan%20IoT%20Store." 
+        target="_blank" 
+        class="wa">
+        <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </a>
+    <div class="wa-bubble">💬 Kalau mau order chat gue ya!</div>
+  </div>
+
+  <a href="https://github.com/Ardaito-IoTdev" target="_blank" class="gh">
+    <i class="fa-brands fa-github"></i>
+  </a>
+</div>
+
+<!-- end of section wa number -->
+<!-- end of list order -->
+
+<!-- start widget platform -->
+  <!-- 🌈 Instagram Feed Section -->
+<section id="instagram" class="instagram-section reveal">
+  <h2 class="ig-title">📸 My Instagram Feed</h2>
+  <p class="ig-desc">Lihat proyek dan aktivitas terbaru gue langsung dari Instagram!</p>
+
+  <div class="ig-container">
+    <!-- 🔹 Taruh embed code lo di sini -->
+    <div class="ig-embed">
+      <!-- Contoh placeholder -->
+      <!-- Ganti baris di bawah dengan embed code dari Elfsight / LightWidget / SnapWidget -->
+      <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+      <div class="elfsight-app-e9314dee-3204-4e6b-88a1-16b1556223a1" data-elfsight-app-lazy></div>
+    </div>
+  </div>
+</section>
+
+<section id="tiktok" class="tiktok-section">
+  <h2 class="tiktok-title">🎵 My TikTok Feed</h2>
+  <p class="tiktok-desc">Lihat video pendek dan update terbaru gue langsung dari TikTok!</p>
+
+  <div class="tiktok-glow"></div>
+
+  <div class="tiktok-container">
+    <!-- 🔹 Tempel kode Elfsight lo di sini -->
+    <div class="elfsight-app-c0a18531-4707-43c3-b1ea-9dfe8d75fc99" data-elfsight-app-lazy></div>
+  </div>
+</section>
+<!-- Script Elfsight -->
+
+<!-- end of widget platform -->
+
+ <!-- start social contact -->
+    <section id="social" class="social reveal">
+        <h2 class="glow">» Connect with Me «</h2>
+        <a href="https://instagram.com/arcdit_" target="_blank">📍 Personal Account</a>
+        <a href="https://instagram.com/ngoding_iot.id" target="_blank">💡 Business Account</a>
+        <a href="https://tiktok.com/@arcnan_" target="_blank">🔎 TikTok Platform</a>
+        <a href="https://www.linkedin.com/in/arnandito-fernanda-08907036a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+               target="_blank">▶️ my LinkedIn</a>
+    </section>
+
+    <!-- Forum Saran/Pendapat Section -->
+    <section id="forum" class="forum reveal">
+        <h2 class="glow">💬 Forum Saran & Pendapat</h2>
+        <p class="forum-subtitle">Berikan saran atau pendapatmu tentang website ini atau proyek IoT-ku! 😊</p>
+        <div class="forum-container">
+            <form id="suggestionForm" class="forum-form" action="https://formspree.io/f/xanlrlkg" method="POST">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required placeholder="Masukkan nama kamu">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Masukkan email kamu">
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" required placeholder="Tulis saran atau pendapatmu di sini..."></textarea>
+                </div>
+                <button type="submit" class="forum-submit">Kirim Saran 🚀</button>
+            </form>
+            <div class="forum-display" id="forumDisplay">
+                <h3>Saran Terbaru:</h3>
+                <div id="suggestionsList"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Anandhito Ernanda. Built with passion for IoT, programming, list order, and information about me.</p>
+        <p style="color:#00ff00"> Contact me for collaboration and professional projects.</p>
+    </footer>
+    <!-- Tutorial Overlay -->
+    <div id="tutorial-overlay" class="tutorial-overlay">
+        <div class="tutorial-highlight" id="tutorial-highlight"></div>
+        <div class="tutorial-bubble" id="tutorial-bubble">
+            <p id="tutorial-text"></p>
+            <button id="tutorial-next" class="tutorial-next">Lanjut</button>
+        </div>
+        <button id="tutorial-skip" class="tutorial-skip">Lewati Tutorial</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+</body>
+</html>
